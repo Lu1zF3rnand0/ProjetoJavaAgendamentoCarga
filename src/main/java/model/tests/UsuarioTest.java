@@ -4,6 +4,7 @@ import model.domain.Usuario;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class UsuarioTest {
@@ -22,11 +23,23 @@ public class UsuarioTest {
         usuario2.setSenha("123");
 
 
+        Scanner scan = new Scanner(System.in);
+        String [] nomes = new String[2];
+
+
+        System.out.println("Digite seu nome1: ");
+        nomes [0] = scan.nextLine();
+
+        System.out.println("Digite seu nome2: ");
+        nomes [1] = scan.nextLine();
+
+        System.out.println(nomes.toString());
+
+
         List<Usuario> usuarios = new ArrayList<>();
 
         usuarios.add(usuario);
         usuarios.add(usuario2);
-
 
         Usuario u = usuarios.stream()
                 .filter(e -> "Marcio".equals(e.getNome()))

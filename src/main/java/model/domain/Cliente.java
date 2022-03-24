@@ -15,14 +15,6 @@ public class Cliente {
 		this.id = cont++;
 	}
 	
-	public Cliente(String nome, String cnpj, String telefone, String email) {
-		this();
-		this.nome= nome;
-		this.cnpj = cnpj;
-		this.telefone = telefone;
-		this.email = email;
-	}
-	
 	@Override
 	public String toString() {
 		return this.nome +

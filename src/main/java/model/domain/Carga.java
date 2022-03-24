@@ -10,7 +10,7 @@ public abstract class Carga {
 
 	protected static int cont = 1;
 
-	public Carga(String navio, String documento, String porto) throws PortoInvalidoException {
+	protected Carga(String navio, String documento, String porto) throws PortoInvalidoException {
 		this();
 		this.navio = navio;
 		this.documento = documento;
@@ -21,7 +21,7 @@ public abstract class Carga {
 		}
 	}
 
-	public Carga() {
+	protected Carga() {
 		this.id = cont++;
 	}
 
@@ -52,4 +52,15 @@ public abstract class Carga {
 		return porto;
 	}
 
+	public void setNavio(String navio) {
+		this.navio = navio;
+	}
+
+	public void setDocumento(String documento) {
+		this.documento = documento;
+	}
+
+	public void setPorto(String porto) {
+		this.porto = porto;
+	}
 }
